@@ -4,7 +4,7 @@ import App from './App'
 import './index.css'
 
 const client = new ApolloClient({
-    uri: 'https://vortex.worldofwarships.ru/api/graphql/glossary/',
+    uri: process.env.REACT_APP_BASE_URL,
     cache: new InMemoryCache(),
 })
 
