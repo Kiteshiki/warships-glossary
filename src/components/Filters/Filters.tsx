@@ -19,7 +19,7 @@ export const Filters = () => {
         dispatch(updateFilters({ ...filtersState, [name]: data }))
     }
 
-    if (loading) return <div className="animate-pulse h-14 rounded-sm bg-slate-600" />
+    if (loading) return <div className="animate-pulse h-16 rounded-sm bg-slate-600" />
     if (error) {
         console.error({ error })
         return null
