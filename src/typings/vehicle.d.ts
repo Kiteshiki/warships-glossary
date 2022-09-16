@@ -28,6 +28,7 @@ declare module 'typings/vehicle' {
         title: string
         description: string
         icons: VehicleIcon
+        nation: VehicleNation
         level: number
         type: VehicleType
     }

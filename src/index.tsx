@@ -1,5 +1,7 @@
 import ReactDOM from 'react-dom/client'
+import { Provider } from 'react-redux'
 import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client'
+import { store } from 'store'
 import App from './App'
 import './index.css'
 
@@ -10,7 +12,9 @@ const client = new ApolloClient({
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
-    <ApolloProvider client={client}>
-        <App></App>
-    </ApolloProvider>,
+    <Provider store={store}>
+        <ApolloProvider client={client}>
+            <App></App>
+        </ApolloProvider>
+    </Provider>,
 )

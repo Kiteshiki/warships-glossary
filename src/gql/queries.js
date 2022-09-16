@@ -7,7 +7,6 @@ export const GET_VEHICLES = gql`
             title
             description
             icons {
-                large
                 medium
             }
             level
@@ -24,10 +23,22 @@ export const GET_VEHICLES = gql`
                 color
                 icons {
                     small
-                    medium
-                    large
                 }
             }
+        }
+    }
+`
+
+export const GET_FILTERS = gql`
+    query {
+        vehicleTypes {
+            title
+            name
+        }
+
+        nations {
+            title
+            name
         }
     }
 `
